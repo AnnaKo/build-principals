@@ -4,9 +4,9 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mnt.training</groupId>
-    <artifactId>my-art</artifactId>
+    <artifactId>hello</artifactId>
     <packaging>jar</packaging>
-    <version>1.0_Beta</version>
+    <version>1.0_Beta.${v}</version>
     <name>maven-home_task</name>
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
