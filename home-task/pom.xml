@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
     <version>1.0</version>
     <name>maven-hometask</name>
-</dependencies>
+<dependencies>
     <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-collections4</artifactId>
