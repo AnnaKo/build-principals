@@ -3,7 +3,7 @@
     <groupId>com.mnt.training</groupId>
     <artifactId>app</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>${BUILD_NUMBER}</version>
     <name>maven-hometask</name>
 <dependencies>
     <dependency>
