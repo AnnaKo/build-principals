@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mtn.training</groupId>
     <artifactId>MavenProject</artifactId>
-    <version>1.0</version>
+    <version>${BUILD_NUMBER}</version>
     <packaging>jar</packaging>
     <name>home-task</name>
     <properties>
