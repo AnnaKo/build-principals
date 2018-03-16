@@ -9,4 +9,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>home-task</name>
+    <build>
+        <sourceDirectory>src/main/java/com/test</sourceDirectory>
+    </build>
 </project>
