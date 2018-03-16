@@ -6,7 +6,7 @@
     <groupId>com.test</groupId>
     <artifactId>hello</artifactId>
     <packaging>jar</packaging>
-    <version>{$BUILD_NUMBER}</version>
+    <version>${BUILD_NUMBER}</version>
     <name>AKO</name>
 <dependencies>
       <dependency>
