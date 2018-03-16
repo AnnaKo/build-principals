@@ -6,7 +6,7 @@
     <groupId>com.mnt.training</groupId>
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
-    <version>${var}</version>
+    <version>4.4-${var}</version>
     <name>maven-simple-sample</name>
     <dependencies>
         <dependency>
