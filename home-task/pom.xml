@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mnt.training</groupId>
-    <artifactId>ci-training</artifactId>
+    <artifactId>app</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
     <name>maven-hometask</name>
