@@ -2,10 +2,9 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>home-task</groupId>
-    <artifactId>home-task</artifactId>
-    <version>-1.0.${v}</version>
+    <artifactId>hello</artifactId>
+    <version>1.0.${v}</version>
     <packaging>jar</packaging>
-    <name>hello</name>
     <build>
         <sourceDirectory>src/main/java/com/test</sourceDirectory>
     </build>
