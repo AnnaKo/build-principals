@@ -7,7 +7,7 @@
 	<groupId>com.mnt.training</groupId>
 	<artifactId>task</artifactId>
 	<packaging>jar</packaging>
-	<version>${version}</version>
+	<version>${BUILD_NUMBER}</version>
 	<name>maven-home-task</name>
 	<!-- properties -->
 	<properties>
