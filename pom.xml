@@ -7,5 +7,5 @@
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>maven-simple-sample</name>
+    <name>home-task</name>
 </project>
