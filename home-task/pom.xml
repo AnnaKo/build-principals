@@ -5,8 +5,8 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mtn.training</groupId>
-    <artifactId>ci-training</artifactId>
-    <version>1.0</version>
+    <artifactId>hello</artifactId>
+    <version>$BUILD_NUMBER</version>
     <packaging>jar</packaging>
     <name>home-task</name>
     <properties>
