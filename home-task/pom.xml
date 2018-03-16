@@ -9,7 +9,8 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>home-task</name>
-    <build>
-        <sourceDirectory>src/main/java/com/test</sourceDirectory>
-    </build>
+    <properties>
+      <maven.compiler.source>1.6</maven.compiler.source>
+      <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
 </project>
