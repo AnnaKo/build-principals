@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>home-task</groupId>
     <artifactId>hello</artifactId>
-    <version>1.0.${v}</version>
+    <version>${v}</version>
     <packaging>jar</packaging>
     <build>
         <sourceDirectory>src/main/java/com/test</sourceDirectory>
