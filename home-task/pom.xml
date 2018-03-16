@@ -8,7 +8,4 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>home-task</name>
-    <build>
-      <sourceDirectory>src/main/java/com/test</sourceDirectory>
-    </build>
 </project>
