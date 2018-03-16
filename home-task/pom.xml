@@ -4,14 +4,33 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mnt.training</groupId>
-    <artifactId>ci-training</artifactId>
+    <artifactId>hello</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${$BUILD_NUMBER}</version>
     <name>maven-simple-sample</name>
     <properties>
       <maven.compiler.source>1.6</maven.compiler.source>
       <maven.compiler.target>1.6</maven.compiler.target>
-    </properties>          
+    </properties> 
+     <build>
+      <sourceDirectory>src/main/java/com/test</sourceDirectory>
+      <plugins>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.test.Project</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        </plugin>
+      </plugins>
+     </build>
     <dependencies>
       <dependency>
         <groupId>commons-collections</groupId>
