@@ -6,7 +6,7 @@
     <groupId>com.mnt.training</groupId>
     <artifactId>hello</artifactId>
     <packaging>jar</packaging>
-    <version>${$BUILD_NUMBER}</version>
+    <version>${BUILD_NUMBER}</version>
     <name>maven-simple-sample</name>
     <properties>
       <maven.compiler.source>1.6</maven.compiler.source>
