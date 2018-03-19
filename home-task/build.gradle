@@ -8,7 +8,7 @@ dependencies {
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
 }
 }
-jar.baseName = "hello-${env.BUILD_NUMBER}"
+jar.baseName = "hello-System.getenv('BUILD_NUMBER')"
 jar {
   manifest {
     attributes(
