@@ -47,15 +47,13 @@ build{
 
 task test(type: Test, overwrite: true){
     doLast {
-        logger.quiet "task test"      
+        logger.quiet "task test"  
+        desc, result ->
+        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
+        }
     test.dependsOn build
     useJUnit {
         include '**/*UnitTest*'
-    }
-    afterTest { 
-        desc, result ->
-        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
-    }
     }
 }
 
