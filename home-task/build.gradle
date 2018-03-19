@@ -53,6 +53,9 @@ artifacts {
     archives tgzArtifacts
 }
 
+tasl test(dependsOn: 'build') {
+}
+
 task hello(dependsOn: 'test') {
     doLast {
         logger.quiet "task hello"
