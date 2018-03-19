@@ -1,4 +1,5 @@
 apply plugin: 'java'
+jar.baseName = 'hello-${BUILD_NUMBER}'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
@@ -12,11 +13,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
     compile group: 'commons-collections', name: 'commons-collections',  version: '3.0'
-}
-sourceSets {
-  test {
-    java {
-      srcDirs = ["src/test/java/com/test"]
-    }
-  }
 }
