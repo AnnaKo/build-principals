@@ -23,7 +23,8 @@ task hello(dependsOn: test) {
 	println "Hello World!"
     }
 }
-task test(overwrite: true) {
-	    println 'Test Task'
+build{
+check.dependsOn.remove(test)
 }
-//test.dependsOn build 
+
+test.dependsOn build 
