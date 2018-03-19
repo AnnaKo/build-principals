@@ -1,2 +1,2 @@
 apply plugin: "java"
-
+import org.apache.commons.collections15.Predicate
