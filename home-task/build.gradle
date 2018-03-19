@@ -13,10 +13,10 @@ dependencies {
 }
 
 jar {
-	manifest {
-		attributes("Implementation-Title": project.name,
-			   "Implementation-Version": project.version,
-			   "Main-Class": "com.test.Project")
+    manifest {
+	attributes("Implementation-Title": name,
+                   "Implementation-Version": version,
+		   "Main-Class": "com.test.Project")
     }
 }
 
