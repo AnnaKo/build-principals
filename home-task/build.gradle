@@ -1,5 +1,5 @@
 apply plugin: 'java'
-version = b_name
+version = b_num
 dependencies {
 	repositories {
 		mavenCentral()
