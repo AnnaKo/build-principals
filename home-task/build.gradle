@@ -38,6 +38,9 @@ task hello(dependsOn: 'test') {
         logger.quiet "My task Hello"
         logger.quiet ""
         logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
+        logger.quiet ""
+        logger.quiet "My Gradle version is $gradle.gradleVersion"
+        logger.quiet ""
     }
 }
 
@@ -65,7 +68,4 @@ task test(type: Test, overwrite: true){
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.5'
-    doFirst {
-        logger.quiet "My Gradle version is $gradle.gradleVersion"
-    }
 }
