@@ -22,10 +22,15 @@ jar {
 
 task hello(dependsOn: 'test') {
     doLast {
-        println 'Hello'
+        println "Test task = " + jar.archiveName.toString()
     }
 }
 
+test{
+	doLast {
+	println "Jar = " + jar.archiveName.toString()
+	}
+}
 
 test.dependsOn assemble
 
