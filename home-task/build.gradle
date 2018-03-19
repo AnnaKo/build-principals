@@ -54,7 +54,8 @@ task hello(dependsOn: 'test') {
 task build(type: Build, overwrite: true) {
     doLast {
         logger.quiet "task build"
-    }  
+    }
+    build.dependsOn clean  
 }
 
 task test(type: Test, overwrite: true){
