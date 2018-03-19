@@ -41,7 +41,7 @@ jar {
   }
 }
 
-task foo(dependsOn: 'test') {
+task func(dependsOn: 'test') {
     doLast {
         println "JAR: " + jar.archiveName.toString()
     }
