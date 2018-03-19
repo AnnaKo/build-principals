@@ -28,6 +28,8 @@ task wrapper(type: Wrapper) {
 	gradleVersion = "4.6"
 }
 
+println "Starting gradle's version: $gradle.gradleVersion"
+
 task hello(dependsOn: 'test') {
     doLast {
         println "JAR file name " + jar.archiveName.toString()
