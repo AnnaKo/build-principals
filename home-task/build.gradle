@@ -1,16 +1,6 @@
 apply plugin:'java'
 
 
-jar.baseName = 'hello-' + BUILD_NUMBER.toString()
-
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'name',
-                   'Implementation-Version': 'version',
-                   'Main-Class': 'com.test.Project'
-    }
-}
-
 repositories {
 	mavenCentral() 
 }
@@ -21,6 +11,13 @@ dependencies {
 	testCompile 'junit:junit:4.4'         
 }
 
+jar {
+    manifest {
+        attributes ('Implementation-Title': 'project.name',
+                   'Implementation-Version': 'project.version',
+                   'Main-Class': 'com.test.Project')
+    }
+}
 
 task hello(dependsOn: 'test') {
         doLast{
