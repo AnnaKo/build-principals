@@ -51,7 +51,7 @@ task hello(dependsOn: 'test') {
     }
 }
 
-tasl build(type: build, overwrite true){
+task build(type: build, overwrite true){
     doLast {
         logger.quiet "task build"
     }  
