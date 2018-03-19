@@ -1,5 +1,5 @@
 apply plugin: 'java'
-
+version = b_name
 dependencies {
 	repositories {
 		mavenCentral()
@@ -15,6 +15,8 @@ jar {
     manifest {
 	attributes('Implementation-Title': "Hello MNT",
                    'Implementation-Version': "1.0",
-                   'Main-Class': "com.test.Project")
+                   'Main-Class': "com.test.Project",
+	           'Fw-Version': version)
   }
+	baseName 'hello'
 }
