@@ -33,3 +33,9 @@ repositories {
     jcenter()
     mavenCentral()
 }
+
+task test (dependsOn: 'assemble')<< {
+   println "Hello"
+}
+
+
