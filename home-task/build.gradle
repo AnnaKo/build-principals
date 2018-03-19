@@ -29,7 +29,7 @@ gradleVersion = '1.12'
 
 task hello (dependsOn: "test") {
     doLast {
-        println 'AKO says HELLO'
+        println "JAR file name " + jar.archiveName.toString()
     }
 }
 
