@@ -24,6 +24,8 @@ task hello(dependsOn: test) {
     }
 }
 task test(overwrite: true,dependsOn: build) {
-	println 'Test Task'
+	doLast{
+	    println 'Test Task'
+        }
 }
 //test.dependsOn assemble 
