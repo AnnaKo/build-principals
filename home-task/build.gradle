@@ -32,3 +32,8 @@ build{
 
 test.dependsOn build
 
+task getBuildNumber << {
+    ext.env = System.getenv()
+    ext.buildNumber = env.BUILD_NUMBER?.toInteger()
+    println "Build Number: $buildNumber"
+}
