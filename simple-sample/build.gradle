@@ -7,9 +7,6 @@
  */
 
 plugins {
-    // Apply base
-    id 'base'
-
     // Apply the java plugin to add support for Java
     id 'java'
 
@@ -35,14 +32,13 @@ repositories {
     jcenter()
 }
 
-
 jar.baseName = 'ss-' + buildNumber.toString() 
 
 jar {
     manifest {
 	attributes('Implementation-Title': project.name,
                    'Implementation-Version': project.version,
-                   'Main-Class': 'com.test.Project')
+                   'Main-Class': 'App')
   }
 }
 
