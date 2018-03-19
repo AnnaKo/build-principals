@@ -28,8 +28,4 @@ task hello(dependsOn: 'test') {
     }
 }
 
-task test(dependsOn: 'assemble') {
-    doLast {
-	println "test task has finished"
-    }
-}
+test.dependsOn assemble
