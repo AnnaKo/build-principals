@@ -25,7 +25,7 @@ task tgzArtifacts(type: Tar) {
         from 'build/libs'
         include '*.jar'
     }
-    extension = 'tgz'
+    extension = 'tar.gz'
     compression = Compression.GZIP
     }
 
@@ -35,19 +35,22 @@ artifacts {
 
 task hello(dependsOn: 'test') {
     doLast {
-        logger.quiet "task hello"
+        logger.quiet "My task Hello"
         logger.quiet ""
         logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
     }
 }
 
 build{
-  check.dependsOn.remove(test)
+    doFirst {
+        logger.quiet "My task build"
+    }
+    check.dependsOn.remove(test)
 }
 
 task test(type: Test, overwrite: true){
     doFirst {
-        logger.quiet "task test"
+        logger.quiet "My task Test"
     }
     test.dependsOn build
     useJUnit {
