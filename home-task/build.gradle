@@ -6,12 +6,7 @@
  * user guide available at https://docs.gradle.org/4.6/userguide/tutorial_java_projects.html
  */
 
-jar.baseName = 'ht-' + buildNumber.toString() 
-
 plugins {
-    // Apply base
-    id 'base'
-    
     // Apply the java plugin to add support for Java
     id 'java'
 
@@ -36,6 +31,8 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+jar.baseName = 'ht-' + buildNumber.toString() 
 
 jar {
     manifest {
