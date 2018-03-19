@@ -38,7 +38,6 @@ task hello(dependsOn: 'test') {
         logger.quiet "My task Hello"
         logger.quiet ""
         logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
-        logger.quiet "My Gradle version is $gradle.gradleVersion"
     }
 }
 
@@ -61,4 +60,10 @@ task test(type: Test, overwrite: true){
         desc, result ->
         logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
     }
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.5'
+    logger.quiet "My Gradle version is $gradle.gradleVersion"
 }
