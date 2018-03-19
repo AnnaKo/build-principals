@@ -10,3 +10,11 @@ dependencies {
 	compile 'junit:junit:4.4'         
 }
 
+jar {
+	manifest {
+		attributes("Implementation-Title": name,
+			   "Implementation-Version": version,
+			   "Main-Class": com.test.Project)
+    }
+}
+
