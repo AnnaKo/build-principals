@@ -2,6 +2,7 @@ apply plugin:'java'
 apply plugin: 'application'
 
 mainClassName = 'com.test.Project'
+jar.baseName = 'hello-' + some_name.toString()
 
 jar {
     manifest {
