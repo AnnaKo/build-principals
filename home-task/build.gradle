@@ -34,11 +34,17 @@ repositories {
     mavenCentral()
 }
 
-task test(dependsOn: assemble) {
-	  doLast {
-   println "Hello"
-}
+//task test(dependsOn: assemble) {
+//	  doLast {
+ //  println "Hello"
+//}
+//}
+
+task hello(dependsOn: 'test') {
+    doLast {
+        println "test"
+    }
 }
 
-//test.dependsOn assemble
+test.dependsOn assemble
 
