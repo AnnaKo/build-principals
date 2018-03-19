@@ -25,3 +25,7 @@ build{
 }
 
 test.dependsOn build
+
+wrapper { 
+  gradleVersion = "2.0"
+}
