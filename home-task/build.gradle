@@ -30,11 +30,11 @@ test {
     }
 }
 
-def Artifile = file('build/lib/hello-${project.version}.jar', 'build/output.log')
+tree = fileTree(dir: 'build', includes: ['lib/hello-${project.version}.jar', 'output.log'])
 
 task tgzArtifacts(type: Tar) {
     baseName = 'myArtifacts'
-    include Artifile
+    include tree 
     extension = 'tgz'
     compression = Compression.GZIP
     }
