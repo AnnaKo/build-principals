@@ -7,6 +7,9 @@
  */
 
 plugins {
+    // Apply base
+    id 'base'
+
     // Apply the java plugin to add support for Java
     id 'java'
 
