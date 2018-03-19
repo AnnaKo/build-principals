@@ -51,11 +51,11 @@ task hello(dependsOn: 'test') {
     }
 }
 
-task test{type: Test, overwrite: true){
+task test(type: Test, overwrite: true){
     doLast {
         logger.quiet "task test"
     }
-    test.dependsOn assemble
+    test.dependsOn build
 }
 
 
