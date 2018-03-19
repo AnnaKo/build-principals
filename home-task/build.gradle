@@ -1,0 +1,22 @@
+apply plugin: "java"
+
+mainClassName = "com.test.Project"
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+targetCompatibility = JavaVersion.VERSION_1_6
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "log4j:log4j:1.2.17"
+}
+
+jar {
+	manifest.attributes("Main-Class": mainClassName);
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = "1.12"
+}
