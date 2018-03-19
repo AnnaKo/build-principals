@@ -20,13 +20,13 @@ dependencies {
 }
 
 test {
-    println 'Starting the UnitTest'
     useJUnit {
         include '**/*UnitTest*'
     }
     testLogging {
         events "passed", "skipped", "failed"
-        info.events = ["passed", "skipped", "failed"]
+    }
+    afterTest { desc, result -> logger.quiet "Test - ${desc.name} result: ${result.resultType}"
     }
 }
 
