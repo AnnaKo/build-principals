@@ -23,10 +23,10 @@ test {
     useJUnit {
         include '**/*UnitTest*'
     }
-    testLogging {
-        events "passed", "skipped", "failed"
-    }
-    afterTest { desc, result -> logger.quiet "Test - ${desc.name} result: ${result.resultType}"
+    afterTest { 
+        desc, result ->
+        logger.quiet "UnitTest"
+        logger.quiet "UnitTest named - ${desc.name} result: ${result.resultType}"
     }
 }
 
