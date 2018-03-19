@@ -1,5 +1,7 @@
 apply plugin:'java'
 
+MainClassName = 'com.test.Project'
+
 repositories {
 	mavenCentral()  
 }
@@ -10,4 +12,8 @@ dependencies {
 	compile 'junit:junit:4.4'         
 }
 
-
+jar {
+   manifest {
+      attributes 'Main-Class': 'MainClassName'
+   }
+}
