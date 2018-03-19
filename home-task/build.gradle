@@ -20,3 +20,11 @@ jar {
   }
 	baseName 'hello'
 }
+
+task hello (dependsOn: test) {
+	doLast {
+		println "Hello message from task hello"
+		}
+}
+
+test.dependsOn assemble
