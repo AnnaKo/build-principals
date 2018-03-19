@@ -21,6 +21,6 @@ dependencies {
 test {
     useTestNG()
     useJUnit {
-        includeCategories 'src/test/java/com/test/**'
+        includeCategories 'com.test.UnitTest'
     }
 }
