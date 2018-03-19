@@ -1,6 +1,8 @@
 apply plugin: "java"
 apply plugin: "application"
 
+jar.baseName = 'hello-' + numberofbuild.toString()
+
 mainClassName = 'com.test.Project'
 
 sourceCompatibility = JavaVersion.VERSION_1_6
