@@ -20,3 +20,12 @@ jar {
     }
 }
 
+task hello(dependsOn: 'test') {
+	doLast {
+		println 'dependencies!'
+	       }
+}
+build{
+	check.dependsOn.remove(test)
+}
+test.dependsOn build
