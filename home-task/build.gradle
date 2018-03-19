@@ -51,7 +51,7 @@ task hello(dependsOn: 'test') {
     }
 }
 
-task test{type: test, overwrite: true){
+task test{type: Test, overwrite: true){
     doLast {
         logger.quiet "task test"
     }
