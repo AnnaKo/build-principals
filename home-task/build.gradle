@@ -20,8 +20,7 @@ dependencies {
 }
 
 test {
-    useTestNG()
     useJUnit {
-        includeCategories 'com/test/UnitTest'
+        include 'com/test/UnitTest'
     }
 }
