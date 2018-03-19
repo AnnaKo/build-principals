@@ -51,11 +51,17 @@ task hello(dependsOn: 'test') {
     }
 }
 
+tasl build(type: build, overwrite true){
+    doLast {
+        logger.quiet "task build"
+    }  
+}
+
 task test(type: Test, overwrite: true){
     doLast {
         logger.quiet "task test"
-    }
-    test.dependsOn assemble
+    }      
+    test.dependsOn build 
 }
 
 
