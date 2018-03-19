@@ -20,9 +20,10 @@ task hello(dependsOn: 'test') {
         println "JAR file name " + jar.archiveName.toString()
     }
 }
-task build(overwrite: true, dependsOn: 'assemble' ){
+task build(overwrite: true){
   doLast {
-        println('assemble')
+        build.dependsOn assemble
+        println "assemble" 
         }
 }
 
