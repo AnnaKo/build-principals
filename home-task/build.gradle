@@ -20,9 +20,11 @@ dependencies {
 }
 
 test {
-    logger.quiet "UnitTest"
     useJUnit {
         include '**/*UnitTest*'
+    }
+    doLast {
+        logger.quiet "UnitTest"
     }
     afterTest { 
         desc, result ->
@@ -42,8 +44,6 @@ task tgzArtifacts(type: Tar) {
     }
     extension = 'tgz'
     compression = Compression.GZIP
-    logger.quiet relativePath(tgzArtifacts.archivePath)
-    logger.quiet tgzArtifacts.archiveName
     }
 
 artifacts {
@@ -53,6 +53,7 @@ artifacts {
 task hello(dependsOn: 'test') {
     doLast {
         logger.quiet "task hello"
+        logger.quiet "Name and path to tgz"relativePath(tgzArtifacts.archivePath)
     }
 }
 test.dependsOn assemble
