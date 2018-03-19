@@ -36,7 +36,7 @@ task tgzArtifacts(type: Tar) {
         from 'build/libs'
         include '*.jar'
     }
-    into ('/'){
+    into ('build'){
         from 'build'
         include '*.log'
     }
@@ -54,6 +54,6 @@ task hello(dependsOn: 'test') {
     }
 }
 
-println relativePath(tgzArtifacts.archivePath)
-println tgzArtifacts.archiveName
+logger.quiet "relativePath(tgzArtifacts.archivePath)"
+logger.quiet "tgzArtifacts.archiveName"
 
