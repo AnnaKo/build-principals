@@ -27,6 +27,8 @@ task hello(dependsOn: "test") {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
  }
+ 
+println "Running gradle version: $gradle.gradleVersion"
 build{
   check.dependsOn.remove(test)
 }
