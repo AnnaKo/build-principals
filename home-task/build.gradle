@@ -10,5 +10,6 @@ dependencies {
   compile 'org.slf4j:slf4j-api:1.7.5'
   compile 'org.slf4j:slf4j-log4j12:1.7.5'
   compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+  compile group: 'junit', name: 'junit-dep', version: '4.8.2'
 }
 
