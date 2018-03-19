@@ -52,7 +52,6 @@ artifacts {
 }
 
 task hello(dependsOn: 'test') {
-    afterhello {
         logger.quiet "task hello"
     }
 }
