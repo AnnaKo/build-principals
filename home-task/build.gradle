@@ -17,9 +17,10 @@ jar {
                    'Main-Class': 'com.test.Project')
   }
 }
+
 task hello(dependsOn: test) {
     doLast {
 	println "Hello World!"
     }
 }
-//task test(dependsOn: build) 
+test.dependsOn assemble 
