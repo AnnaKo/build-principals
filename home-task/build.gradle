@@ -10,6 +10,7 @@ dependencies {
 }
 
 jar {
+  ${baseName}-${appendix}-${version}-${classifier}.${extension}
   manifest {
     attributes(
     "Created-By": "sasa",
@@ -17,3 +18,10 @@ jar {
     "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
   }
 }
+
+task hello << {
+   println "MR"
+}
+
+task tests(dependsOn: 'build')
+task hello(dependsOn: 'tests')
