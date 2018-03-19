@@ -1,5 +1,5 @@
 apply plugin: 'java'
-jar.baseName = 'hello-' + buildNumber
+jar.baseName = 'hello-' + buildNumber.toString()
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
