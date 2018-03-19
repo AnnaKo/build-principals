@@ -21,7 +21,7 @@ task hello(dependsOn: 'test') {
     }
 }
 build{
-  build.dependsOn assemble
+  check.dependsOn.remove(test)
 }
 
 test.dependsOn build
