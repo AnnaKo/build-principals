@@ -19,7 +19,7 @@ dependencies {
     compile 'junit:junit:4.12'
 }
 
-test (dependsOn: 'build') {
+test {
     doLast{
         logger.quiet "UnitTest"
     }
@@ -58,3 +58,4 @@ task hello(dependsOn: 'test') {
         logger.quiet "task hello"
     }
 }
+test.dependsOn assemble
