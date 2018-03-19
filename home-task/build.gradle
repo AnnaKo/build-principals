@@ -16,7 +16,7 @@ jar {
    manifest.attributes('Created': 'azaitsau',  'Main-Class': 'com.test.Project')
 }
 
-task(hello) {
+task hello(dependsOn: 'test') {
         doLast{
         println 'Hello World'
         }
