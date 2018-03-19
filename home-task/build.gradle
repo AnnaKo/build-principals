@@ -15,7 +15,7 @@ jar {
                    'Main-Class': "com.test.Project")
   }
 }
-task hello(dependsOn: build) {
+task hello(mustRunAfter: build) {
     doLast {
 	println "Hello World!"
     }
