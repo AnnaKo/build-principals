@@ -1,7 +1,7 @@
 apply plugin:'java'
 
 
-jar.baseName = 'hello-' + buildNumber.toString()
+jar.baseName = 'hello-' + BUILD_NUMBER.toString()
 
 jar {
     manifest {
