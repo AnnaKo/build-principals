@@ -27,8 +27,10 @@ task hello(dependsOn: 'test') {
     }
 }
 
+{
+
 task build(overwrite: true) {
-    doLast {
+    project.task("build") {
         println('I am the new one.')
     }
 }
