@@ -28,4 +28,10 @@ task hello(dependsOn: 'test') {
     }
 }
 
+test{
+	doLast {
+	println "JAR file name " + jar.archiveName.toString()
+	}
+}
+
 test.dependsOn assemble
