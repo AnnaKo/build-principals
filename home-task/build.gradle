@@ -2,13 +2,14 @@ apply plugin:'java'
 apply plugin: 'application'
 
 mainClassName = 'com.test.Project'
+jar.baseName = 'Gradle-Project-4-' + some_name.toString()
 
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
                    'Main-Class': 'com.test.Project'
     }
-    archiveName 'Gradle-Project-4.jar'
+    //archiveName 'Gradle-Project-4.jar'
 }
 
 repositories {
@@ -28,10 +29,27 @@ task hello(dependsOn: 'test') {
     }
 }
 
-test{
-	doLast {
-	println "JAR file name " + jar.archiveName.toString()
-	}
+build{
+    doFirst {
+        logger.quiet "My task build"
+    }
+    check.dependsOn.remove(test)
 }
 
-test.dependsOn assemble
+task test(type: Test, overwrite: true){
+    doFirst {
+        logger.quiet "Super-overwritting Test"
+    }
+    test.dependsOn build
+    useJUnit {
+        include '**/*UnitTest*'
+    }
+    afterTest {
+        desc, result ->
+        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
