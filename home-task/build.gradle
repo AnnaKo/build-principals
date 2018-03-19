@@ -24,7 +24,7 @@ dependencies {
 
 task hello(dependsOn: 'test') {
     doLast {
-        println "JAR file name " + jar.archiveName.toString()
+        println "Test task works =  " + jar.archiveName.toString()
     }
 }
 
