@@ -1,35 +1,13 @@
 apply plugin:'java'
-
-dependencies {
-        repositories { 
-                mavenCentral()  //this section tells gradle where to find dependencies
-        }
+dependencies {repositories {mavenCentral()}
         compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
         compile group: 'log4j', name: 'log4j', version: '1.2.17' 
-	compile group: 'junit', name: 'junit', version: '4.12'
-}
-
+	compile group: 'junit', name: 'junit', version: '4.12'}
 jar.baseName = 'app-' + BUILD_NUMBER.toString()
- 
-jar {
- 
-  manifest {
-    attributes(
+jar {manifest {attributes(
     "Created-By": "sasa",
     "Main-Class": "com.test.Project",
-    "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
-  }
-}
-
-task hello(dependsOn: 'test') {
-    doLast {
-        println 'Hello dependencies'
-    }
-}
-
-
-build{
-  check.dependsOn.remove(test)
-}
-
+    "Class-Path": configurations.compile.collect { it.getName() }.join(' '))}}
+task hello(dependsOn: 'test') {doLast {println 'Hello dependencies'}}
+build{check.dependsOn.remove(test)}
 test.dependsOn build
