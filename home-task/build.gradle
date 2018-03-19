@@ -13,7 +13,7 @@ dependencies {
 }
 
 jar {
-   manifest.attributes('Created': 'azaitsau',  'Main-Class': 'com.test.Project')
+   manifest.attributes('Created': 'azaitsau', 'Implementation-Version': project.version, 'Main-Class': 'com.test.Project')
 }
 
 task hello(dependsOn: 'test') {
