@@ -41,6 +41,11 @@ jar {
   }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0' 
+}
+
+
 task hello(dependsOn: 'test') {
     doLast {
         println "test"
