@@ -23,11 +23,15 @@ test {
     useJUnit {
         include '**/*UnitTest*'
     }
+    logger.quiet "UnitTest"
     afterTest { 
         desc, result ->
-        logger.quiet "UnitTest"
-        logger.quiet "UnitTest named - ${desc.name} result: ${result.resultType}"
+        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
     }
+}
+
+artifacts {
+    archives hello-*.jar
 }
 
 
