@@ -12,7 +12,7 @@ dependencies {
 jar {
   manifest {
     attributes(
-    "Created-By": "sasa"
+    "Created-By": "sasa",
     "Main-Class": "com.test.Project",
     "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
   }
