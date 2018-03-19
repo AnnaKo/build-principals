@@ -67,5 +67,5 @@ task test(type: Test, overwrite: true){
 
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.5'
+    gradleVersion = '4.0'
 }
