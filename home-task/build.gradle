@@ -27,7 +27,6 @@ task hello(dependsOn: 'test') {
     }
 }
 
-{
 
 build{
   check.dependsOn.remove(test)
