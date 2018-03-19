@@ -13,7 +13,6 @@ dependencies {
 }
 
 jar {
-   manifest {
-      attributes 'Main-Class': 'MainClassName'
+   manifest.attributes('Main-Class': MainClassName);
    }
 }
