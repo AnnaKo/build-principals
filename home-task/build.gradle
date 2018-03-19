@@ -3,6 +3,13 @@ apply plugin: 'application'
 
 mainClassName = 'com.test.Project'
 
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Hello app',
+                   'Main-Class': 'com.test.Project'
+    }
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
