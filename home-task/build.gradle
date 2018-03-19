@@ -23,4 +23,4 @@ task hello(dependsOn: "test") {
         println 'Hello darkness my old friend!'
     }
 }
-test.dependsOn "build"
+test.dependsOn assemble
