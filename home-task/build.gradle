@@ -21,7 +21,7 @@ jar {
 
 task hello(dependsOn: 'test') {
         doLast{
-        println 'Hello Jar' + jar.archiveName.toString()
+        println 'Hello Test' + jar.archiveName.toString()
         }
 
 }
@@ -30,7 +30,7 @@ build{
   check.dependsOn.remove(test)
 }
 
-test.dependsOn build   
+test.dependsOn assemble
 
 
 
