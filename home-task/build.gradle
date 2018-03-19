@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'java-library'
+apply plugin: 'application'
 
 jar.baseName = 'hello-' + numberofbuild.toString()
 mainClassName = 'com.test.Project'
@@ -27,7 +28,7 @@ task wrapper(type: Wrapper) {
 gradleVersion = '1.12'
 }
 
-task hello (dependsOn: "test") {
+task hello (dependsOn: 'test') {
     doLast {
         println "JAR file name " + jar.archiveName.toString()
     }
