@@ -35,13 +35,12 @@ test {
 task tgzArtifacts(type: Tar) {
     baseName = 'myArtifacts'
     into ('/'){
-        include '*.log'
         from 'build/libs'
         include '*.jar'
     }
-    into ('build'){
-        from 'build'
-        include '*.log'
+    into ('/'){
+        from 'build/'
+        include 'output.log'
     }
     extension = 'tgz'
     compression = Compression.GZIP
