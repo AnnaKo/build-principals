@@ -50,4 +50,13 @@ task hello(dependsOn: 'test') {
         logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
     }
 }
-test.dependsOn assemble
+
+task test{type: test, overwrite: true){
+    doLast {
+        logger.quiet "task test"
+    }
+    test.dependsOn assemble
+}
+
+
+
