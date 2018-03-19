@@ -33,6 +33,8 @@ task hello (dependsOn: 'test') {
     }
 }
 
+println "Running gradle version: $gradle.gradleVersion"
+
 build{
   check.dependsOn.remove(test)
 }
