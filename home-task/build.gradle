@@ -13,8 +13,10 @@ dependencies {
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
     compile group: 'commons-collections', name: 'commons-collections',  version: '3.0'
 }
-test {
-  java {
-    srcDirs = ["src/test/java/com/test"]
+sourceSets {
+  test {
+    java {
+      srcDirs = ["src/test/java/com/test"]
+    }
   }
 }
