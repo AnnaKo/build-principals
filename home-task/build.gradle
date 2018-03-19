@@ -20,7 +20,7 @@ dependencies {
     compile 'org.slf4j:slf4j-log4j12:1.7.5'
 }
 
-task intro (dependsOn: hello) {
+task intro (dependsOn: "test") {
     doLast {
         println 'AKO says HELLO'
     }
