@@ -65,5 +65,7 @@ task test(type: Test, overwrite: true){
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.5'
-    logger.quiet "My Gradle version is $gradle.gradleVersion"
+    doFirst {
+        logger.quiet "My Gradle version is $gradle.gradleVersion"
+    }
 }
