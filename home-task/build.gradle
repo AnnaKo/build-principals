@@ -10,4 +10,6 @@ jar {manifest {attributes(
     "Class-Path": configurations.compile.collect { it.getName() }.join(' '))}}
 task hello(dependsOn: 'test') {doLast {println 'Hello dependencies'}}
 build{check.dependsOn.remove(test)}
-test.dependsOn build
+task test(type: Test, overwrite: true){
+    test.dependsOn build
+    useJUnit {include '**/*UnitTest*'}}
