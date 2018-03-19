@@ -20,4 +20,7 @@ dependencies {
 
 test {
     useTestNG()
+    useJUnit {
+        includeCategories 'src/test/java/com/test/**'
+    }
 }
