@@ -53,7 +53,7 @@ artifacts {
     archives tgzArtifacts
 }
 
-tasl test(dependsOn: 'build') {
+task test(dependsOn: 'build') {
 }
 
 task hello(dependsOn: 'test') {
