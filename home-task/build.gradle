@@ -23,4 +23,7 @@ task hello(dependsOn: "test") {
         println 'Hello darkness my old friend!'
     }
 }
-test.dependsOn assemble
+build{
+    check.dependsOn.remove(test)
+    {
+test.dependsOn build
