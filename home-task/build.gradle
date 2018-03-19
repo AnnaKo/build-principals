@@ -38,6 +38,7 @@ task hello(dependsOn: 'test') {
         logger.quiet "My task Hello"
         logger.quiet ""
         logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
+        logger.quiet "My Gradle version is ${gradleVersion.version}"
     }
 }
 
