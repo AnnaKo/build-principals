@@ -13,3 +13,7 @@ build{check.dependsOn.remove(test)}
 task test(type: Test, overwrite: true){
     test.dependsOn build
     useJUnit {include '**/*UnitTest*'}}
+    
+task wrapper(type: Wrapper) {
+   gradleVersion = '2.0' //version required
+}
