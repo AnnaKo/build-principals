@@ -5,6 +5,7 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at https://docs.gradle.org/4.6/userguide/tutorial_java_projects.html
  */
+apply plugin: "java"
 
 plugins {
     // Apply the java plugin to add support for Java
@@ -34,6 +35,11 @@ repositories {
     mavenCentral()
 }
 
+jar {
+  manifest {
+    attributes 'Main-Class': "com.test.Project"
+  }
+}
 
 task hello(dependsOn: 'test') {
     doLast {
