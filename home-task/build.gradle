@@ -2,13 +2,14 @@ apply plugin: 'java'
 apply plugin: 'java-library'
 apply plugin: 'application'
 
-jar.baseName = 'hello-' + numberofbuild.toString()
 mainClassName = 'com.test.Project'
 
 repositories {
     mavenCentral()
     jcenter()
 }
+
+jar.baseName = "hello-" + System.getenv('BUILD_NUMBER')
 
 jar {
   manifest {
