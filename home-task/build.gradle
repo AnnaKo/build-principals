@@ -27,5 +27,5 @@ task hello(dependsOn: 'test') {
     }
 }
 
-task test(dependsOn: 'build')
+//task test(dependsOn: 'build')
 //task hello(dependsOn: 'tests')
