@@ -32,7 +32,9 @@ check.dependsOn.remove(test)
 
 test.dependsOn build 
 
-
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.0"
+}
 
 
 
