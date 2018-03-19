@@ -23,7 +23,7 @@ task hello(dependsOn: test) {
 	println "Hello World!"
     }
 }
-task test (overwrite: true,dependsOn: build) {
+task test(overwrite: true,dependsOn: build) {
 	println 'Test Task'
 }
 //test.dependsOn assemble 
