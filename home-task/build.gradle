@@ -24,7 +24,9 @@ task hello(dependsOn: "test") {
         println 'Hello darkness my old friend!'
     }
 }
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+ }
 build{
   check.dependsOn.remove(test)
 }
