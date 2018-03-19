@@ -35,10 +35,24 @@ repositories {
     jcenter()
 }
 
+
+jar.baseName = 'ss-' + buildNumber.toString() 
+
 jar {
     manifest {
 	attributes('Implementation-Title': project.name,
                    'Implementation-Version': project.version,
-                   'Main-Class': 'App')
+                   'Main-Class': 'com.test.Project')
   }
 }
+
+task func(dependsOn: 'test') {
+    doLast {
+        println "JAR: " + jar.archiveName.toString()
+    }
+}
+build{
+  check.dependsOn.remove(test)
+}
+
+test.dependsOn build
