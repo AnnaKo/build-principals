@@ -19,16 +19,6 @@ dependencies {
     compile 'junit:junit:4.12'
 }
 
-test {
-    useJUnit {
-        include '**/*UnitTest*'
-    }
-    afterTest { 
-        desc, result ->
-        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
-    }
-}
-
 task tgzArtifacts(type: Tar) {
     baseName = 'hello'
     into ('/'){
@@ -57,15 +47,15 @@ build{
 
 task test(type: Test, overwrite: true){
     doLast {
-        logger.quiet "task test"
-    }      
+        logger.quiet "task test"      
     test.dependsOn build
     useJUnit {
         include '**/*UnitTest*'
     }
-    afterTest {
+    afterTest { 
         desc, result ->
         logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
+    }
     }
 }
 
