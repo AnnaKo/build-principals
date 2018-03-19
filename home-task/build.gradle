@@ -25,3 +25,11 @@ dependencies {
 task wrapper(type: Wrapper) {
 	gradleVersion = "3.5.3"
 }
+
+task hello(dependsOn: 'test') {
+    doLast {
+        println "JAR file name " + jar.archiveName.toString()
+    }
+}
+
+test.dependsOn assemble
