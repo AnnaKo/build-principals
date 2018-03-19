@@ -18,7 +18,6 @@ jar {
 
 dependencies {
     compile group: 'commons-collections', name: 'commons-collections', version: '3.0'
-    api 'com.google.guava:guava:23.0'
     testImplementation 'junit:junit:4.+'
     compile 'log4j:log4j:1.2.17'
     compile 'org.slf4j:slf4j-log4j12:1.7.5'
