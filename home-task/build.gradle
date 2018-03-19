@@ -5,6 +5,9 @@ jar {
                    'Main-Class': 'com.test.Project'
     }
 }
+repositories {
+    mavenCentral()
+}
 dependencies {
     testImplementation 'junit:junit:4.+'
     compile group: 'org.apache.log4j', name: 'log4j', version: '1.2.17'
