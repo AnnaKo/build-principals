@@ -45,8 +45,8 @@ task tgzArtifacts(type: Tar) {
     }
     extension = 'tgz'
     compression = Compression.GZIP
-    logger.quiet "relativePath(tgzArtifacts.archivePath)"
-    logger.quiet "tgzArtifacts.archiveName"
+    logger.quiet relativePath(tgzArtifacts.archivePath)
+    logger.quiet tgzArtifacts.archiveName
     }
 
 artifacts {
@@ -57,5 +57,5 @@ task hello(dependsOn: 'test') {
         logger.quiet "task hello"
 }
 
-println tgzTask.archiveName
-println relativePath(tgzTask.destinationDir)
+println tgzArtifacts.archiveName
+println relativePath(tgzArtifacts.destinationDir)
