@@ -27,4 +27,10 @@ task hello(dependsOn: 'test') {
     }
 }
 
-test.dependsOn assemble
+task build(overwrite: true) {
+    doLast {
+        println('I am the new one.')
+    }
+}
+
+test.dependsOn build
