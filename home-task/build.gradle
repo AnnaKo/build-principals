@@ -30,9 +30,10 @@ test {
     }
 }
 
+def Artifile = file('build/lib/hello-${project.version}.jar', 'build/output.log')
+
 task tgzArtifacts(type: Tar) {
     baseName = 'myArtifacts'
-    def Artifile = file('build/lib/hello-${project.version}.jar', 'build/output.log')
     include Artifile
     extension = 'tgz'
     compression = Compression.GZIP
