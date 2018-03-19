@@ -23,7 +23,9 @@ test {
     useJUnit {
         include '**/*UnitTest*'
     }
-    logger.quiet "UnitTest"
+    afterTest{
+        logger.quiet "UnitTest"
+    }
     afterTest { 
         desc, result ->
         logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
@@ -33,6 +35,7 @@ test {
 task tgzArtifacts(type: Tar) {
     baseName = 'myArtifacts'
     into ('/'){
+        include '*.log'
         from 'build/libs'
         include '*.jar'
     }
@@ -49,11 +52,12 @@ artifacts {
 }
 
 task hello(dependsOn: 'test') {
-    doLast {
+    afterhello {
         logger.quiet "task hello"
     }
 }
-
-logger.quiet "relativePath(tgzArtifacts.archivePath)"
-logger.quiet "tgzArtifacts.archiveName"
+afterbild {
+    logger.quiet "relativePath(tgzArtifacts.archivePath)"
+    logger.quiet "tgzArtifacts.archiveName"
+    }
 
