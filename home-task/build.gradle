@@ -19,7 +19,7 @@ dependencies {
     compile 'junit:junit:4.12'
 }
 
-test {
+test (dependsOn: 'build') {
     doLast{
         logger.quiet "UnitTest"
     }
@@ -51,9 +51,6 @@ task tgzArtifacts(type: Tar) {
 
 artifacts {
     archives tgzArtifacts
-}
-
-task test(dependsOn: 'build') {
 }
 
 task hello(dependsOn: 'test') {
