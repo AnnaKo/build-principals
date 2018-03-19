@@ -2,14 +2,14 @@ apply plugin:'java'
 apply plugin: 'application'
 
 mainClassName = 'com.test.Project'
-jar.baseName = 'hello-' + some_name.toString()
+jar.baseName = 'Gradle-Project-4-' + some_name.toString()
 
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
                    'Main-Class': 'com.test.Project'
     }
-    archiveName 'Gradle-Project-4.jar'
+    //archiveName 'Gradle-Project-4.jar'
 }
 
 repositories {
