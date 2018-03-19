@@ -55,7 +55,7 @@ task test(type: Test, overwrite: true){
     doLast {
         logger.quiet "task test"
     }
-    test.dependsOn build
+    test.dependsOn assemble
 }
 
 
