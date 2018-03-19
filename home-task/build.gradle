@@ -1,7 +1,5 @@
 apply plugin: "java"
 
-mainClassName = "com.test.Project"
-
 sourceCompatibility = JavaVersion.VERSION_1_6
 targetCompatibility = JavaVersion.VERSION_1_6
 
@@ -11,12 +9,10 @@ repositories {
 
 dependencies {
 	compile "log4j:log4j:1.2.17"
-}
-
-jar {
-	manifest.attributes("Main-Class": mainClassName);
+	compile "commons-collections:commons-collections:3.2.2"
+	compile "junit:junit:4.8.1"
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = "1.12"
+	gradleVersion = "3.5.3"
 }
