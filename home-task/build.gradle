@@ -23,7 +23,7 @@ jar {
 
 task hello(dependsOn: 'test') {
     doLast {
-        println 'Hello'
+        println 'Hello dependencies'
     }
 }
 
