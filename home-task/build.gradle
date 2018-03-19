@@ -34,8 +34,10 @@ repositories {
     mavenCentral()
 }
 
-task test(dependsOn: 'assemble') << {
+task test(dependsOn: 'assemble') {
+	  doLast {
    println "Hello"
+}
 }
 
 
