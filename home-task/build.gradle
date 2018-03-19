@@ -15,12 +15,13 @@ plugins {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'Project'
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:23.0'
-
+compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: '2.1'
+compile 'org.apache.commons:commons-collections4:4.2-SNAPSHOT'
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
