@@ -5,11 +5,23 @@ repositories {
     jcenter()
 }
 
+jar {
+   manifest {
+      attributes 'Main-Class': 'com.test.Project'
+   }
+}
+
 dependencies {
   compile 'log4j:log4j:1.2.17'
   compile 'org.slf4j:slf4j-api:1.7.5'
   compile 'org.slf4j:slf4j-log4j12:1.7.5'
   compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
   compile group: 'junit', name: 'junit-dep', version: '4.8.2'
+}
+
+task hello {
+    doLast {
+        println 'Hello'
+    }
 }
 
