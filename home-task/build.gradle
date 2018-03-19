@@ -9,6 +9,7 @@
 jar.baseName = 'ht-' + buildNumber.toString() 
 
 plugins {
+    // Apply base
     id 'base'
     
     // Apply the java plugin to add support for Java
