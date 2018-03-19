@@ -27,5 +27,5 @@ build{
 test.dependsOn build
 
 task wrapper(type: Wrapper) {
-  gradleVersion = "2.0"
+  gradleVersion = "3.0"
 }
