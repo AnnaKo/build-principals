@@ -1,5 +1,5 @@
 apply plugin: 'java'
-jar.baseName = "hello-${BUILD_NUMBER}"
+jar.baseName = 'hello-' + System.getenv( 'BUILD_NUMBER' ).toString()
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
