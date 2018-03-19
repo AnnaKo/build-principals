@@ -1,7 +1,7 @@
 apply plugin: "java"
 apply plugin: "application"
 
-jar.baseName = 'hello-' + numberofbuild.toString()
+//jar.baseName = 'hello-' + numberofbuild.toString()
 
 mainClassName = 'com.test.Project'
 
