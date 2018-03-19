@@ -19,8 +19,10 @@ jar {
   }
 }
 
-task hello << {
-   println "MR"
+task('hello') {
+    doLast {
+        println "hello"
+    }
 }
 
 task tests(dependsOn: 'build')
