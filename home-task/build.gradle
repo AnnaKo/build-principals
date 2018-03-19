@@ -19,3 +19,13 @@ jar {
 }
 
 
+
+task hello(dependsOn: 'test') {
+    doLast {
+        println 'Hello'
+    }
+}
+
+
+test.dependsOn assemble
+
