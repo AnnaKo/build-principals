@@ -23,4 +23,8 @@ task hello(dependsOn: test) {
 	println "Hello World!"
     }
 }
-test.dependsOn assemble 
+task test (overwrite: true,dependsOn build)
+{
+ println('test task')
+}
+//test.dependsOn assemble 
