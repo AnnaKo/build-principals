@@ -26,8 +26,8 @@ test {
     }
     testLogging {
         events "passed", "skipped", "failed"
+        info.events = ["passed", "skipped", "failed"]
     }
-    info.events = ["passed", "skipped", "failed"]
 }
 
 
