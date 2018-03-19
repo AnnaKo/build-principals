@@ -1,5 +1,5 @@
 apply plugin: 'java'
-jar.baseName = 'hello-' + System.getenv( 'BUILD_NUMBER' ).toString()
+jar.baseName = 'hello-' + buildNumber
 jar {
     manifest {
         attributes 'Implementation-Title': 'Hello app',
@@ -17,6 +17,6 @@ dependencies {
 
 task hello(dependsOn: 'test') {
     doLast {
-        println jar.archiveName.toString()
+        println "JAR file name " + jar.archiveName.toString()
     }
 }
