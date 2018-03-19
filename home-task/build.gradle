@@ -20,4 +20,4 @@ task hello(dependsOn: 'test') {
         println "JAR file name " + jar.archiveName.toString()
     }
 }
-build.dependsOn test
+test.dependsOn assemble
