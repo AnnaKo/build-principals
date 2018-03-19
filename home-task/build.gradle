@@ -19,11 +19,11 @@ jar {
   }
 }
 
-task('hello') {
+task hello(dependsOn: 'tests') {
     doLast {
         println "hello"
     }
 }
 
 task tests(dependsOn: 'build')
-task hello(dependsOn: 'tests')
+//task hello(dependsOn: 'tests')
