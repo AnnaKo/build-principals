@@ -17,3 +17,4 @@ task test(type: Test, overwrite: true){
 task wrapper(type: Wrapper) {
    gradleVersion = '2.0' //version required
 }
+println "Running gradle version: $gradle.gradleVersion"
