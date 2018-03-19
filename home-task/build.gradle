@@ -1,5 +1,7 @@
 apply plugin:'java'
 
+jar.baseName = 'hello-' + buildNumber.toString()
+
 repositories {
 	mavenCentral()  
 }
