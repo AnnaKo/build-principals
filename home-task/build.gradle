@@ -10,7 +10,7 @@ dependencies {
 }
 
 jar {
-  //${baseName}-${appendix}-${version}-${classifier}.${extension}
+  baseName: app-${BUILD_NUMBER}
   manifest {
     attributes(
     "Created-By": "sasa",
