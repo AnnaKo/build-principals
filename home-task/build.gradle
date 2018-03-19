@@ -23,7 +23,8 @@ task hello(dependsOn: "test") {
         println 'Hello darkness my old friend!'
     }
 }
+
 build{
-    check.dependsOn.remove(test)
-    {
+  check.dependsOn.remove(test)
+}
 test.dependsOn build
