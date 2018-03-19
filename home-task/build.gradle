@@ -23,12 +23,12 @@ test {
     useJUnit {
         include '**/*UnitTest*'
     }
+    logger.quiet "UnitTest"
     doLast {
-        logger.quiet "UnitTest"
-    }
-    afterTest { 
-        desc, result ->
-        logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
+        afterTest { 
+            desc, result ->
+            logger.quiet "UnitTest - ${desc.name} result: ${result.resultType}"
+        }
     }
 }
 
@@ -53,7 +53,7 @@ artifacts {
 task hello(dependsOn: 'test') {
     doLast {
         logger.quiet "task hello"
-        logger.quiet "Name and path to tgz"relativePath(tgzArtifacts.archivePath)
+        logger.quiet "Name and path to tgz: " + relativePath(tgzArtifacts.archivePath)
     }
 }
 test.dependsOn assemble
