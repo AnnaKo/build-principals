@@ -53,8 +53,8 @@ artifacts {
 
 task hello(dependsOn: 'test') {
         logger.quiet "task hello"
-    }
 }
+
 afterbild {
     logger.quiet "relativePath(tgzArtifacts.archivePath)"
     logger.quiet "tgzArtifacts.archiveName"
