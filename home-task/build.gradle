@@ -30,10 +30,24 @@ test {
     }
 }
 
-def Jarfile = file('build/lib/hello-${project.version}.jar')
+task tgzArtifacts(type: Tar) {
+    baseName = 'myArtifacts'
+    def Artifile = file('build/lib/hello-${project.version}.jar', 'build/output.log')
+    include Artifile
+    extension = 'tgz'
+    compression = Compression.GZIP
+    }
 
 artifacts {
-    archives Jarfile
+    archives tgzArtifacts
 }
 
+task hello(dependsOn: 'test') {
+    doLast {
+        logger.quiet "task hello"
+    }
+}
+
+println relativePath(tgzArtifacts.archivePath)
+println tgzArtifacts.archiveName
 
