@@ -30,11 +30,16 @@ test {
     }
 }
 
-tree = fileTree(dir: 'build', includes: ['libs/hello-${project.version}.jar', 'output.log'])
-
 task tgzArtifacts(type: Tar) {
     baseName = 'myArtifacts'
-    include tree
+    into ('/'){
+        from 'build/libs'
+        include '*.jar'
+    }
+    into ('/'){
+        from 'build'
+        include '*.log'
+    }
     extension = 'tgz'
     compression = Compression.GZIP
     }
