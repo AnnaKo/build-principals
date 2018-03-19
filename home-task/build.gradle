@@ -21,6 +21,6 @@ dependencies {
 
 test {
     useJUnit {
-        include 'com/test/UnitTest'
+        include '**/*UnitTest*'
     }
 }
