@@ -8,6 +8,7 @@ jar {
         attributes 'Implementation-Title': 'Hello app',
                    'Main-Class': 'com.test.Project'
     }
+    archiveName 'Gradle-Prject-4.jar'
 }
 
 repositories {
