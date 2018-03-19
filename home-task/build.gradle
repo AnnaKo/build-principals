@@ -20,9 +20,7 @@ dependencies {
 }
 
 test {
-    doLast{
-        logger.quiet "UnitTest"
-    }
+    logger.quiet "UnitTest"
     useJUnit {
         include '**/*UnitTest*'
     }
