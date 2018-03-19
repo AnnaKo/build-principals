@@ -17,3 +17,10 @@ jar {
     )
   }
 }
+
+task hello(dependsOn: test) {
+    doLast {
+        println 'Hello darkness my old friend!'
+    }
+}
+task test(dependsOn: build)
