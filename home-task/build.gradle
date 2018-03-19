@@ -5,9 +5,9 @@ jar.baseName = 'hello-' + BUILD_NUMBER.toString()
 
 jar {
     manifest {
-        attributes("Implementation-Title": name,
-                   "Implementation-Version": version,
-                   "Main-Class": "com.test.Project")
+        attributes 'Implementation-Title': 'name',
+                   'Implementation-Version': 'version',
+                   'Main-Class': 'com.test.Project')
     }
 }
 
