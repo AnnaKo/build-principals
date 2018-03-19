@@ -24,8 +24,6 @@ task hello(dependsOn: test) {
     }
 }
 task test(overwrite: true) {
-doLast{
 	    println 'Test Task'
-        }
 }
 //test.dependsOn build 
