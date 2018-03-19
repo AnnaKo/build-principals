@@ -30,8 +30,10 @@ test {
     }
 }
 
+def Jarfile = file('build/lib/hello-${project.version}.jar')
+
 artifacts {
-    archives hello-*.jar
+    archives Jarfile
 }
 
 
