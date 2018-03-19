@@ -1,11 +1,11 @@
 apply plugin: 'java'
 
-jar.baseName = 'home_task-' + buildNumber.toString()
+jar.baseName = 'simple_sample-' + buildNumber.toString()
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Home',
-                   'Main-Class': 'com.test.Project'
+        attributes 'Implementation-Title': 'Simple',
+                   'Main-Class': 'com.test.Test'
     }
 }
 
