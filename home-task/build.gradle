@@ -3,7 +3,7 @@ apply plugin:'java'
 
 
 repositories {
-	mavenCentral()  
+	mavenCentral() 
 }
 
 dependencies {
@@ -18,11 +18,12 @@ jar {
 
 task hello(dependsOn: 'test') {
         doLast{
-        println 'Hello World'
+        println 'Hello Jar' + jar.archiveName.toString()
         }
-        
-}
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
 }
+   
+test.dependsOn assemble
+
+
+
