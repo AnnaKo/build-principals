@@ -19,5 +19,5 @@ dependencies {
 }
 
 test {
-    systemProperties 'property': 'value'
+    useTestNG()
 }
