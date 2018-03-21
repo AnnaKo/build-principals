@@ -26,3 +26,6 @@ public void doSomethingWithFile(String fileName) {
     }
   } catch (IOException e) {
   }
+
+String ip = "127.0.0.1";
+Socket socket = new Socket(ip, 6667);
