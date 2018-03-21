@@ -22,7 +22,7 @@ class Project {
    System.out.println("Hello Test");
    int ab = 10;
    System.out.println(Integer.toString(ab));
-   while(ab == 10)
+   while(1 == 1)
    {
     ab += 2;
    }
