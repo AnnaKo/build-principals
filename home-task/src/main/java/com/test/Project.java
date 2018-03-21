@@ -18,12 +18,8 @@ class Project {
   }
  
   String ip = "127.0.0.1";
-  Socket socket = new Socket(ip, 6667);
+  Socket socket = new Socket(ip, 6667); // comment test
  
-  String firstName = a; 
-  String lastName = b;
-
-  if (firstName == lastName) {};  
  
 }
 
