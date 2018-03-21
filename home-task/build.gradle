@@ -1,6 +1,9 @@
 apply plugin:'java'
 apply plugin: 'application'
 
+a="hello Aliaksandr"
+print("a")
+
 mainClassName = 'com.test.Project'
 
 jar.baseName = 'hello-' + buildNumber.toString()
