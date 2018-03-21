@@ -20,6 +20,11 @@ class Project {
   String ip = "127.0.0.1";
   Socket socket = new Socket(ip, 6667);
  
+  String firstName = getFirstName();   //String overrides equals
+  String lastName = getLastName();
+
+  if (firstName == lastName) { ... };   // Non-compliant; false even if the strings have the same value
+ 
 }
 
 
