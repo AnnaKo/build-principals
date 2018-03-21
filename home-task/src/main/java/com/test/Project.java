@@ -22,10 +22,10 @@ class Project {
    System.out.println("Hello Test");
    int ab = 10;
    System.out.println(Integer.toString(ab));
+   System.out.println(new Project().getGreeting());
    while(1 == 1)
    {
     ab += 2;
    }
-    System.out.println(new Project().getGreeting());
   }
 }
