@@ -10,10 +10,10 @@ class Project {
     }
 
   public static void test() {
-    logger.log("test");
+        logger.log("test");
   }
 
   public static void main(String[] args) {
-    logger.log(new Project().getGreeting());
+        logger.log(new Project().getGreeting());
   }
 }
