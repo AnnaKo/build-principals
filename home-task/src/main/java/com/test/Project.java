@@ -17,6 +17,6 @@ class Project {
     System.out.println(new Project().getGreeting());
   }
   while (True){
-    System.out.println("AAA-AAA-AAAA!")
+    System.out.println("AAA-AAA-AAAA!");
   }
 }
