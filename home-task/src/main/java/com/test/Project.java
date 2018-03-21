@@ -8,10 +8,6 @@ class Project {
  public String getGreeting() {
         return "Hello, MNT Lab!";
     }
- 
-  public void test32456() {
-    System.out.println("test");
-  }
 
   public static void test() {
     System.out.println("test");
