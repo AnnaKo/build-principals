@@ -4,7 +4,17 @@ import org.apache.commons.collections.Predicate;
 import org.apache.log4j.Logger;
 
 class Project {
-
+void test1(){
+    for (;;){
+        System.out.println("hello");
+    }
+}
+void test2(){
+    while(true){
+        System.out.println("world");
+    }
+}
+  
   public String getGreeting() {
     return "Hello, MNT Lab!";
   }
