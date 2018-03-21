@@ -3,7 +3,10 @@ package com.test;
 import org.apache.commons.collections.Predicate;
 import org.apache.log4j.Logger;
 
-class Project {
+class Projdect {
+public static void teddddst() {
+    System.out.println("tddsdsest");
+  }
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
