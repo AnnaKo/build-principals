@@ -12,5 +12,9 @@ class Project {
 
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
+    while(1)
+    {
+     String a = "Hello, MNT Lab!";
+    }
   }
 }
