@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 class Project {
 
  public String getGreeting() {
-    while(True){        
+    while(true){        
      return "Hello, MNT Lab!";
                }
     }
