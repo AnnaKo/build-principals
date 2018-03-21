@@ -15,7 +15,7 @@ class Project {
 
   public static void main(String[] args) {
       System.out.println(new Project().getGreeting());
-      while(True) {
+      while(true) {
         System.out.println("Some problems?");
       }
   }
