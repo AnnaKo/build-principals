@@ -14,6 +14,13 @@ class Project {
   }
 
   public static void main(String[] args) {
+      System.out.println(new Project().getGreeting());
+      while(True) {
+        System.out.println("Some problems?");
+      }
+    }
+
+  public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }
 }
