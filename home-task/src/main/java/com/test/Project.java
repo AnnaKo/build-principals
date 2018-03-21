@@ -15,10 +15,14 @@ class Project {
   }
 
   public static void main(String[] args) {
+   int massive[];
+        massive = new int[10];
+        massive[10] = 10;
+   System.out.println(Integer.toString(massive[10]));
    System.out.println("Hello Test");
    int ab = 10;
    System.out.println(Integer.toString(ab));
-   while(10 == 10)
+   while(ab == 10)
    {
     ab += 2;
    }
