@@ -15,6 +15,9 @@ class Project {
   }
 
   public static void main(String[] args) {
+   System.out.println("Hello Test");
+   int ab = 10;
+   System.out.println(Integer.toString(ab));
     System.out.println(new Project().getGreeting());
   }
 }
