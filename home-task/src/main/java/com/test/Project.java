@@ -16,15 +16,4 @@ class Project {
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }
- 
-  private int x;
-  private int y;
-
-  public void setX(int val) { // Noncompliant: field 'x' is not updated
-    this.y = val;
-  }
-
-  public int getY() { // Noncompliant: field 'y' is not used in the return value
-    return this.x;
-  }
 }
