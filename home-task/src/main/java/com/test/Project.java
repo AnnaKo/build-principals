@@ -12,6 +12,8 @@ class Project {
    {
     a *= 5;
    }
+  int IntMassive[];
+  IntMassive = new int[10];
  }
 
   public static void test() {
