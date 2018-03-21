@@ -6,15 +6,16 @@ class Project {
         return "Hello, MNT Lab!";
     }
  /*infinity*/
-int i;
-for (i = 0; i < 10; i = i++) {
-    System.out.println(i);
-}
+
   public static void test() {
     System.out.println("test");
   }
 
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
+   int i;
+   for (i = 0; i < 10; i = i++) {
+    System.out.println(i);
+  }
   }
 }
