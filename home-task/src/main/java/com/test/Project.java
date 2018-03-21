@@ -6,11 +6,6 @@ import org.apache.log4j.Logger;
 class Project {
 
  public String getGreeting() {
-  int b = 0;
-   while (7 == 7)
-   {
-    b *=7;
-   }
         return "Hello, MNT Lab!";
    
  }
@@ -20,6 +15,11 @@ class Project {
   }
 
   public static void main(String[] args) {
+     int b = 0;
+   while (7 == 7)
+   {
+    b *=7;
+   }
     System.out.println(new Project().getGreeting());
   }
 }
