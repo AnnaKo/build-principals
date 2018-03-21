@@ -13,9 +13,8 @@ class Project {
     System.out.println("test");
   }
 
-  public static void main(String[] args) {
-    System.out.println(new Project().getGreeting());
-  }
+public static void main(String[] args) {
+System.out.println(new Project().getGreeting());
 }
-def zlo():
-  print(metallica)
+}
+
