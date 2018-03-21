@@ -7,10 +7,15 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
-    }
+  int badvar;
+   while(5 == 5)
+   {
+    a *= 5;
+   }
+ }
 
   public static void test() {
-    System.out.println("test");
+    System.out.println("test");   
   }
 
   public static void main(String[] args) {
