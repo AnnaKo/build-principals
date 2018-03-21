@@ -7,6 +7,7 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
+           return getGreeting()
     }
 
   public static void test() {
