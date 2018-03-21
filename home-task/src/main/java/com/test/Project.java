@@ -9,6 +9,13 @@ class Project {
         return "Hello, MNT Lab!";
     }
 
+ int NoExistingVariable;
+ while(5 == 5)
+ {
+  a *= 5;
+ }
+}
+ 
   public static void test() {
     System.out.println("test");
   }
