@@ -15,11 +15,6 @@ class Project {
   }
 
   public static void main(String[] args) {
-     int b = 0;
-   while (7 == 7)
-   {
-    b *= 7;
-   }
     System.out.println(new Project().getGreeting());
   }
 }
