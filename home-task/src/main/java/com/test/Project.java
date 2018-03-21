@@ -7,11 +7,6 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
-  int badvar;
-   while(5 == 5)
-   {
-    a *= 5;
-   }
         int massive[];
         massive = new int[10];
         massive[10] = 10;
