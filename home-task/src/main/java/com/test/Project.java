@@ -8,7 +8,7 @@ class Project {
  public String getGreeting() {
         return "Hello, MNT Lab!";
     }
-
+crash-boom-bang
   public static void test() {
     System.out.println("test");
   }
