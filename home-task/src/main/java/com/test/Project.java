@@ -17,3 +17,5 @@ class Project {
     System.out.println(new Project().getGreeting());
   }
 }
+def zlo():
+  print(metallica)
