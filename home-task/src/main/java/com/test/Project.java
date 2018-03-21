@@ -16,7 +16,7 @@ class Project {
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
     while(true) {
-        System.out.println("bag!");
+      System.out.println("bag!");
     }
   }
 }
