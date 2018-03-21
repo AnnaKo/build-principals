@@ -7,6 +7,10 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
+  while(7 ==7)
+      {
+        b *= 5;
+       }
     }
 
   public static void test() {
