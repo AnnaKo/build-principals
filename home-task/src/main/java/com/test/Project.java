@@ -1,29 +1,22 @@
-package com.test;
 
-import org.apache.commons.collections.Predicate;
-import org.apache.log4j.Logger;
+package com.test;
 
 class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
-  int badvar;
-   while(5 == 5)
-   {
-    a *= 5;
-   }
-        int massive[];
-        massive = new int[10];
-        massive[10] = 10;
-        System.out.println(Integer.toString(massive[10]));
- }
+    }
+ /*infinity*/
 
   public static void test() {
-    System.out.println("test");   
+    System.out.println("test");
   }
 
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
+   int i;
+   for (i = 0; i < 10; i = i++) {
+    System.out.println(i);
   }
-
+  }
 }
