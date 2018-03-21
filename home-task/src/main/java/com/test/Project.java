@@ -8,9 +8,9 @@ class Project {
  public String getGreeting() {
         return "Hello, MNT Lab!";
   int b;
-  while(7 ==7)
+  while(7 == 7)
       {
-        b *= 5;
+        b*=5;
        }
     }
 
