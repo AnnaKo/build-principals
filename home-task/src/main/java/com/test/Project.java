@@ -18,14 +18,6 @@ class Project {
   }
 }
 
-public void doSomethingWithFile(String fileName) {
-  BufferedReader buffReader = null;
-  try {
-    buffReader = new BufferedReader(new FileReader(fileName));
-    while (buffReader.readLine() != null) {
-    }
-  } catch (IOException e) {
-  }
 
 String ip = "127.0.0.1";
 Socket socket = new Socket(ip, 6667);
