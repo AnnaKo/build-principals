@@ -17,3 +17,6 @@ class Project {
     System.out.println(new Project().getGreeting());
   }
 }
+
+public int read(byte[] b)
+         throws IOException
