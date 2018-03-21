@@ -16,8 +16,11 @@ class Project {
   public static void main(String[] args) {
     System.out.println(new Project().getGreeting());
   }
+ 
+  String ip = "127.0.0.1";
+  Socket socket = new Socket(ip, 6667);
+ 
 }
 
 
-String ip = "127.0.0.1";
-Socket socket = new Socket(ip, 6667);
+
