@@ -5,7 +5,11 @@ class Project {
  public String getGreeting() {
         return "Hello, MNT Lab!";
     }
-
+ /*infinity*/
+int i;
+for (i = 0; i < 10; i = i++) {
+    System.out.println(i);
+}
   public static void test() {
     System.out.println("test");
   }
