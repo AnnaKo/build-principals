@@ -6,9 +6,10 @@ import org.apache.log4j.Logger;
 class Project {
 
  public String getGreeting() {
+        if i > 0
         return "Hello, MNT Lab!";
     }
-crash-boom-bang
+
   public static void test() {
     System.out.println("test");
   }
