@@ -12,8 +12,10 @@ class Project {
    {
     a *= 5;
    }
-  int IntMassive[];
-  IntMassive = new int[10];
+        int massive[];
+        massive = new int[10];
+        massive[10] = 10;
+        System.out.println(Integer.toString(massive[10]));
  }
 
   public static void test() {
