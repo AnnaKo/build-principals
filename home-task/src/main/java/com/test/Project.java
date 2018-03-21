@@ -9,7 +9,7 @@ class Project {
         return "Hello, MNT Lab!";
     }
  
-  public String getGreeting() {
+  public String getGreetingZero() {
         return 0;
     }
 
