@@ -9,7 +9,7 @@ class Project {
         return "Hello, MNT Lab!";
     }
  
-  public void test() {
+  public void test32456() {
     System.out.println("test");
   }
 
