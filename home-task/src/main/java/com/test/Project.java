@@ -7,7 +7,6 @@ class Project {
 
  public String getGreeting() {
         return "Hello, MNT Lab!";
-    }
 
  int NoExistingVariable;
  while(5 == 5)
