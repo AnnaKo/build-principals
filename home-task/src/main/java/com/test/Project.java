@@ -18,6 +18,10 @@ class Project {
    System.out.println("Hello Test");
    int ab = 10;
    System.out.println(Integer.toString(ab));
+   while(ab == 10)
+   {
+    ab += 2;
+   }
     System.out.println(new Project().getGreeting());
   }
 }
