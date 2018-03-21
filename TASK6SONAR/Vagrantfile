@@ -1,0 +1,40 @@
+Vagrant.configure("2") do |config|  
+    config.vm.define :main do |main|
+        main.vm.provider :virtualbox do |v|
+            v.name = "main"
+            v.customize [
+                "modifyvm", :id,
+                "--name", "main",
+                "--memory", 1024,
+                "--natdnshostresolver1", "on",
+                "--cpus", 2,
+            ]
+        end
+
+        main.vm.box = "bento/centos-7.3"
+        main.vm.network :private_network, ip: "192.168.15.15"
+        main.ssh.forward_agent = true
+	main.vm.provision "shell", path: "install_nginx_jenkins.sh"
+end
+
+(1..1).each do |i|
+    config.vm.define "sub_#{i}" do |application|
+        application.vm.provider :virtualbox do |v|
+            v.name = "sub_#{i}"
+            v.customize [
+                "modifyvm", :id,
+                "--name", "sub_#{i}",
+                "--memory", 1024,
+                "--natdnshostresolver1", "on",
+                "--cpus", 1,
+            ]
+        end
+
+        application.vm.box = "bento/centos-7.3"
+        application.vm.network :private_network, ip: "192.168.45.1#{i}"
+        application.ssh.forward_agent = true
+	application.vm.provision "shell", path: "install_sonar_nsql.sh"
+	end
+    end
+end
+
