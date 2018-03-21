@@ -9,9 +9,9 @@ class Project {
         return "Hello, MNT Lab!";
     }
  
-  public getGreetingZero() {
-        return 0;
-    }
+  public void test() {
+    System.out.println("test");
+  }
 
   public static void test() {
     System.out.println("test");
