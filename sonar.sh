@@ -60,7 +60,8 @@ echo "Sonar may now run as a service"
 
 #configure nginx for sonar
 systemctl enable nginx.service
-sed -i 's@location / {@location / { proxy_pass http://localhost:9000; proxy_redirect http://localhost:9000 http://sonar;@g' /etc/nginx/nginx.conf
+rm -rf /etc/nginx/nginx.conf
+cp /vagrant/sonar-nginx/nginx.conf /etc/nginx/nginx.conf
 systemctl start nginx.service
 echo "nginx configured for http://sonar"
 

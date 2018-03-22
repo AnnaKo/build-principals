@@ -8,14 +8,55 @@
 Vagrant.configure("2") do |config|
 #config.vm.box = "centos-7.4-x86_64-minimal.box"
 
-	config.vm.define "jtest2" do |jtest2|
+            config.vm.define "nexus" do |nexus|
+	    nexus.vm.box = "centos-7.4-x86_64-minimal.box"
+            nexus.vm.hostname = "nexus"
+            nexus.vm.network "private_network", ip: "192.168.56.150"
+            nexus.vm.provider "virtualbox" do |vb|
+	       vb.customize ["modifyvm", :id, "--memory", 4096]
+            nexus.vm.provision "shell", path: "/home/student/vagrant/Nexus/nexus.sh", run: 'always'
+	    end	    
+end
+
+            config.vm.define "sonar" do |sonar|
+	    sonar.vm.box = "centos-7.4-x86_64-minimal.box"
+            sonar.vm.hostname = "sonar"
+            sonar.vm.network "private_network", ip: "192.168.56.200"
+            sonar.vm.provider "virtualbox" do |vb|
+	       vb.customize ["modifyvm", :id, "--memory", 4096]
+            sonar.vm.provision "shell", path: "/home/student/vagrant/Common/sonar.sh", run: 'always'
+	    end
+end
+
+            config.vm.define "jenkins" do |jenkins|
+	    jenkins.vm.box = "centos-7.4-x86_64-minimal.box"
+            jenkins.vm.hostname = "jenkins"
+            jenkins.vm.network "private_network", ip: "192.168.56.10"
+            jenkins.vm.provider "virtualbox" do |vb|
+	       vb.customize ["modifyvm", :id, "--memory", 4096]
+            jenkins.vm.provision "shell", path: "/home/student/vagrant/Common/jenkins.sh", run: 'always'
+	    end
+end
+            
+            config.vm.define "jtest" do |jtest|
+	    jtest.vm.box = "centos-7.4-x86_64-minimal.box"
+            jtest.vm.hostname = "jtest"
+            jtest.vm.network "private_network", ip: "192.168.56.11"
+            jtest.vm.provider "virtualbox" do |vb|
+	       vb.customize ["modifyvm", :id, "--memory", 4096]
+            jtest.vm.provision "shell", path: "/home/student/vagrant/Common/jtest.sh", run: 'always'
+	    end
+end
+
+            config.vm.define "jtest2" do |jtest2|
 	    jtest2.vm.box = "centos-7.4-x86_64-minimal.box"
             jtest2.vm.hostname = "jtest2"
             jtest2.vm.network "private_network", ip: "192.168.56.12"
             jtest2.vm.provider "virtualbox" do |vb|
 	       vb.customize ["modifyvm", :id, "--memory", 4096]
-            jtest2.vm.provision "shell", path: "/home/student/vagrant/jtest2/jenkins.sh", run: 'always'
+            jtest2.vm.provision "shell", path: "/home/student/vagrant/Common/jtest2.sh", run: 'always'
 	    end
+
         end
 
   # The most common configuration options are documented and commented below.

@@ -46,7 +46,7 @@ export JENKINS_DIR="/opt/jenkins/bin"
 systemctl enable nginx.service
 systemctl start nginx.service
 rm -rf /etc/nginx/nginx.conf
-cp /vagrant/nginx.conf /etc/nginx/nginx.conf
+cp /vagrant/jtest2-nginx/nginx.conf /etc/nginx/nginx.conf
 systemctl restart nginx.service
 echo "nginx configured for http://jenkins12"
 

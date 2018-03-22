@@ -45,9 +45,10 @@ export JENKINS_DIR="/opt/jenkins/bin"
 #configure nginx for jenkins
 systemctl enable nginx.service
 systemctl start nginx.service
-sed -i 's@location / {@location / { proxy_pass http://localhost:8080; proxy_redirect http://localhost:8080 http://jenkins11;@g' /etc/nginx/nginx.conf
+rm -rf /etc/nginx/nginx.conf
+cp /vagrant/jenkins-nginx/nginx.conf /etc/nginx/nginx.conf
 systemctl restart nginx.service
-echo "nginx configured for http://jenkins11"
+echo "nginx configured for http://jenkins"
 
 
 
